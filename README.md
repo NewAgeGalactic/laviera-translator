@@ -1,5 +1,3 @@
-# laviera-translator
-
 # welcome to laviera
 
 this is a translator for the launguage laviera that i made at the start of the year.
