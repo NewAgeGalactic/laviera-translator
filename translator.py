@@ -4,24 +4,40 @@ import laviera
 from laviera import translation_dict
     #Add more translation mappings as needed
 
+def find_replacements(word):
+    replacements = []
+    for i in range(len(word) - 2):
+        for j in range(i + 3, len(word) + 1):
+            subword = word[i:j]
+            if subword in translation_dict:
+                replacements.append((subword, translation_dict[subword][0]))
+    return replacements
 
-def translate_text(event=None):  # Add event=None as a parameter to handle the event
+
+
+def translate_text(event):
     input_text = input_field.get("1.0", "end-1c")  # Get input text from the entry field
 
-    # Apply translation based on the dictionary
-    translated_text = ""
+    # Split input text into individual words
     words = input_text.split()
+    translated_words = []
+
+    # Apply translation based on the dictionary
     for word in words:
-        translation = translation_dict.get(word.lower(), None)
-        if translation is not None:
-            translated_word = translation[0]
-            unicode_char = translation[1] if len(translation) > 1 else ''
-            translated_text += translated_word + " " + unicode_char + " "
+        replacements = find_replacements(word.lower())
+        if replacements:
+            translated_word = word
+            for subword, translated_subword in replacements:
+                translated_word = translated_word.replace(subword, translated_subword)
+            translated_words.append(translated_word)
         else:
+            translated_word = ""
             for char in word:
                 translated_char = translation_dict.get(char.lower(), (char, ''))[0]
-                translated_text += translated_char
-            translated_text += " "
+                translated_word += translated_char
+            translated_words.append(translated_word)
+
+    translated_text = " ".join(translated_words)
 
     output_field.delete("1.0", "end")  # Clear the output field
     output_field.insert("1.0", translated_text.strip())  # Display the translated text in the output field
