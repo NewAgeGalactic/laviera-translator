@@ -95,7 +95,7 @@ translation_dict = {
     'tho': ('tran ',''),
     'tha': ('tran',''),
     'ayleho': ('alee',''),
-    # 'ehx': ('Hex',''),
+    'staff': ('see-tra-afas',''),
     # 'ehx': ('Hex',''),
     # 'ehx': ('Hex',''),
     # 'ehx': ('Hex',''),

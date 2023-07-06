@@ -13,6 +13,10 @@ def find_replacements(word):
                 replacements.append((subword, translation_dict[subword][0]))
     return replacements
 
+def createoutput(translated_text, input_field):
+    file_path = "output.txt"
+    with open(file_path, 'w') as file:
+        file.write(translated_text + '\n' + input_field)
 
 
 def translate_text(event):
@@ -41,6 +45,7 @@ def translate_text(event):
 
     output_field.delete("1.0", "end")  # Clear the output field
     output_field.insert("1.0", translated_text.strip())  # Display the translated text in the output field
+    createoutput(translated_text, input_text)
 # Create the GUI
 root = tk.Tk()
 root.configure(width=480,height=640)
@@ -49,8 +54,6 @@ root.title("Live Translation Program")
 # Input field
 input_field = tk.Text(root, height=10, width=100)
 input_field.pack()
-
-# Translate button
 
 
 # Output field
