@@ -7,7 +7,7 @@ from laviera import translation_dict
 def find_replacements(word):
     replacements = []
     for i in range(len(word) - 2):
-        for j in range(i + 3, len(word) + 1):
+        for j in range(i + 2, len(word) + 2):
             subword = word[i:j]
             if subword in translation_dict:
                 replacements.append((subword, translation_dict[subword][0]))
@@ -31,6 +31,7 @@ def translate_text(event):
         replacements = find_replacements(word.lower())
         if replacements:
             translated_word = word
+            
             for subword, translated_subword in replacements:
                 translated_word = translated_word.replace(subword, translated_subword)
             translated_words.append(translated_word)
@@ -42,7 +43,7 @@ def translate_text(event):
             translated_words.append(translated_word)
 
     translated_text = " ".join(translated_words)
-
+    
     output_field.delete("1.0", "end")  # Clear the output field
     output_field.insert("1.0", translated_text.strip())  # Display the translated text in the output field
     createoutput(translated_text, input_text)
