@@ -73,4 +73,3 @@ the project is licenced under MIT
 
 ## Contact
 
-the file is self contained so if you want to make it a EXE then you can use pyinstaller or py2exe
