@@ -14,6 +14,7 @@ def find_replacements(word):
     return replacements
 
 def createoutput(translated_text, input_field):
+    
     file_path = "output.txt"
     with open(file_path, 'w') as file:
         file.write(translated_text + '\n' + input_field)
