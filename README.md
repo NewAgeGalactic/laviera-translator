@@ -73,6 +73,4 @@ the project is licenced under MIT
 
 ## Contact
 
-- charlie_sans-
-- Project Link: [https://github.com/NewAgeGalactic/laviera-translator](https://github.com/NewAgeGalactic/laviera-translator)
-
+the file is self contained so if you want to make it a EXE then you can use pyinstaller or py2exe
