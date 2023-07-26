@@ -2,6 +2,7 @@
 
 ![Project Image](project-image-url)
 
+<<<<<<< HEAD
 > the official laviera translator allows you to translate between multiple launguages to and from laviera
 
 ---
@@ -73,3 +74,5 @@ the project is licenced under MIT
 
 ## Contact
 
+- charlie_sans-
+- Project Link: [https://github.com/NewAgeGalactic/laviera-translator](https://github.com/NewAgeGalactic/laviera-translator)
