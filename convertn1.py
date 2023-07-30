@@ -8,7 +8,17 @@ def process_file(input_file, output_file):
     with open(output_file, 'w') as file:
         for word in words:
             chunks = split_into_chunks(word)
-            file.write(' '.join(chunks) + '\n')
+            lines = []
+            current_line = ""
+            for chunk in chunks:
+                if len(current_line) + len(chunk) <= 6:
+                    current_line += chunk + " "
+                else:
+                    lines.append(current_line.strip())
+                    current_line = chunk + " "
+            if current_line:
+                lines.append(current_line.strip())
+            file.write('\n'.join(lines) + '\n')
 
 if __name__ == "__main__":
     input_filename = "input.txt"  # Replace with the path to your input file
