@@ -532,7 +532,7 @@ button = tk.Button(
     height=1,
     bg="blue",
     fg="yellow",
-    command=open_help()
+    command=open_help()   
 )
 button.pack()
 button1 = tk.Button(
@@ -544,15 +544,8 @@ button1 = tk.Button(
     command=open_help()
 )
 button1.pack()
-button2 = tk.Button(
-    text="Click me!",
-    width=10,
-    height=1,
-    bg="blue",
-    fg="yellow",
-    command=open_help()
-)
-button2.pack()
+
+
 # Output field
 output_field = tk.Text(root, height=10, width=100)
 output_field.pack()
