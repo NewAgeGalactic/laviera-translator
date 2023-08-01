@@ -2,8 +2,8 @@
 
 ![Project Image](project-image-url)
 
-<<<<<<< HEAD
-> the official laviera translator allows you to translate between multiple launguages to and from laviera
+
+ the official laviera translator allows you to translate between multiple launguages to and from laviera
 
 ---
 
@@ -76,3 +76,9 @@ the project is licenced under MIT
 
 - charlie_sans-
 - Project Link: [https://github.com/NewAgeGalactic/laviera-translator](https://github.com/NewAgeGalactic/laviera-translator)
+
+did you know that if you provide a text file with words seperated by newlines, the program will automatically translate it?
+
+just open the file lavieradictrans.py and change the inputfile from input.json to the file you want, but it has to be txt or json.
+
+i know that the name is a bit too big right now, just want to push something that works.
