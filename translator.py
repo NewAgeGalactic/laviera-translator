@@ -17,7 +17,7 @@ def createoutput(translated_text, input_field):
     with open(file_path, 'w') as file:
         file.write(translated_text + '\n' + input_field)
 
-
+        
 def translate_text(event):
     input_text = input_field.get("1.0", "end-1c")  # Get input text from the entry field
 

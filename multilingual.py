@@ -81,7 +81,7 @@ def save_to_file(translated_pairs, detected_language):
 # Example usage:
 if __name__ == "__main__":
     translation_dict = {
-        # ... (existing translation dictionary remains the same)
+       
             'b': ('bs',"ʖ"),
     'c': ('see',"ᓵ"),
     'd': ('du',"⟍̅"),
