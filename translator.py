@@ -1,6 +1,8 @@
 import tkinter as tk
 from laviera_dict import translation_dict
-
+import os
+import subprocess
+import sys
 
 def find_replacements(word):
     replacements = []
@@ -48,6 +50,9 @@ def translate_text(event):
     output_field.delete("1.0", "end")  # Clear the output field
     output_field.insert("1.0", translated_text.strip())  # Display the translated text in the output field
     createoutput(translated_text, input_text)
+    print(translated_text)
+
+    
 
 
 # Create the GUI
